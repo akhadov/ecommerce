@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace E_Commerce.Domain.Enums
 {
-    public enum OrderState
+    public enum DeliveryState
     {
-        Confirmed,
-        Canceled
+        Completed,
+        Cancelled
     }
 }
