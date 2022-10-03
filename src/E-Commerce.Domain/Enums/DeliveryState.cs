@@ -8,7 +8,9 @@ namespace E_Commerce.Domain.Enums
 {
     public enum DeliveryState
     {
-        Completed,
+        Delivered,
+        InProgress,
+        NotYet,
         Cancelled
     }
 }
