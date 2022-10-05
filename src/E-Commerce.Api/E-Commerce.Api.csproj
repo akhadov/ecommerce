@@ -13,6 +13,9 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
+    <Folder Include="Middlewares\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>

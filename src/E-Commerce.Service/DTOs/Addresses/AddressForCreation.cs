@@ -1,13 +1,10 @@
-﻿using E_Commerce.Domain.Commons;
-
-namespace E_Commerce.Domain.Entities.Addresses
+﻿namespace E_Commerce.Service.DTOs.Addresses
 {
-    public class Address : Auditable
+    public class AddressForCreation
     {
         public string ShippingAddress { get; set; } = String.Empty;
         public string ShippingCity { get; set; } = String.Empty;
         public string ShippingCountry { get; set; } = String.Empty;
         public uint PostalCode { get; set; }
-
     }
 }

@@ -7,4 +7,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Interfases\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Mappers\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
 </Project>

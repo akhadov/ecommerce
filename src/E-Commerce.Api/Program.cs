@@ -7,10 +7,13 @@ var connectionString = builder.Configuration.GetConnectionString("DbName");
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(connectionString));
 #endregion
+
+#region Services
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+#endregion
 
 #region Middlewares
 var app = builder.Build();
