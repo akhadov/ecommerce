@@ -2,12 +2,7 @@
 using E_Commerce.Domain.Entities.Users;
 using E_Commerce.Service.DTOs.Users;
 using E_Commerce.Service.Interfases;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace E_Commerce.Service.Services
 {
