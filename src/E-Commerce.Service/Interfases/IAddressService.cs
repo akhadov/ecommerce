@@ -1,13 +1,7 @@
 ﻿using E_Commerce.Domain.Configurations;
 using E_Commerce.Domain.Entities.Addresses;
-using E_Commerce.Domain.Entities.Users;
 using E_Commerce.Service.DTOs.Addresses;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace E_Commerce.Service.Interfases
 {

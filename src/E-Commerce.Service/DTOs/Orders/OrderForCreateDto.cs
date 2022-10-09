@@ -1,9 +1,4 @@
-﻿using E_Commerce.Domain.Entities.Addresses;
-using E_Commerce.Domain.Entities.Payments;
-using E_Commerce.Domain.Entities.Users;
-using E_Commerce.Domain.Enums;
-
-namespace E_Commerce.Service.DTOs.Orders
+﻿namespace E_Commerce.Service.DTOs.Orders
 {
     public class OrderForCreateDto
     {

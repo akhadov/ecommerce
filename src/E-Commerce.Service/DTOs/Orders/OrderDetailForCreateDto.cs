@@ -1,6 +1,4 @@
-﻿using E_Commerce.Domain.Entities.Users;
-
-namespace E_Commerce.Service.DTOs.Orders
+﻿namespace E_Commerce.Service.DTOs.Orders
 {
     public class OrderDetailForCreateDto
     {
