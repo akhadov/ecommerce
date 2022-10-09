@@ -40,9 +40,9 @@ namespace E_Commerce.Data.Repositories
             GC.SuppressFinalize(this);
         }
 
-        public Task SaveChangesAsync()
+        public async Task SaveChangesAsync()
         {
-            throw new NotImplementedException();
+            await _dbContext.SaveChangesAsync();
         }
     }
 }
