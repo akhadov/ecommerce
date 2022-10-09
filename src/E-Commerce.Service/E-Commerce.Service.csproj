@@ -8,10 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfases\" />
-    <Folder Include="Helpers\" />
     <Folder Include="Mappers\" />
-    <Folder Include="Services\" />
+    <Folder Include="Exceptions\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\E-Commerce.Domain\E-Commerce.Domain.csproj" />
   </ItemGroup>
 
 </Project>
