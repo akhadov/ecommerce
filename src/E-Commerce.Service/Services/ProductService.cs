@@ -1,4 +1,6 @@
-﻿using E_Commerce.Domain.Configurations;
+﻿using AutoMapper;
+using E_Commerce.Data.IRepositories;
+using E_Commerce.Domain.Configurations;
 using E_Commerce.Domain.Entities.Products;
 using E_Commerce.Service.DTOs.Products;
 using E_Commerce.Service.Interfases;
@@ -8,6 +10,14 @@ namespace E_Commerce.Service.Services
 {
     public class ProductService : IProductService
     {
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
+
+        public ProductService(IUnitOfWork unitOfWork, IMapper mapper)
+        {
+            this._unitOfWork = unitOfWork;
+            this._mapper = mapper;
+        }
         public Task<Product> AddAsync(ProductForCreateDto dto)
         {
             throw new NotImplementedException();

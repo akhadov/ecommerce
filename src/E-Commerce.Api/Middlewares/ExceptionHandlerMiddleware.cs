@@ -1,4 +1,8 @@
-﻿namespace E_Commerce.Api.Middlewares
+﻿using E_Commerce.Service.Exceptions;
+using Newtonsoft.Json;
+using System.Net;
+
+namespace E_Commerce.Api.Middlewares
 {
     public class ExceptionHandlerMiddleware
     {
@@ -10,7 +14,36 @@
         }
         public async Task InvokeAsync(HttpContext httpContext)
         {
-            await _next(httpContext);
+            try
+            {
+                await _next(httpContext);
+            }
+            catch (StatusCodeException statusCodeException)
+            {
+                await HandlerAsync(statusCodeException, httpContext);
+            }
+            catch (Exception exception)
+            {
+                await HandlerOtherAsync(exception, httpContext);
+            }
+        }
+        public async Task HandlerAsync(StatusCodeException exception, HttpContext httpContext)
+        {
+            httpContext.Response.StatusCode = (int)exception.StatusCode;
+            httpContext.Response.ContentType = "application/json";
+            string json =
+                JsonConvert.SerializeObject(new { StatusCode = exception.StatusCode, Message = exception.Message });
+
+            await httpContext.Response.WriteAsync(json);
+        }
+        public async Task HandlerOtherAsync(Exception exception, HttpContext httpContext)
+        {
+            httpContext.Response.StatusCode = 500;
+            httpContext.Response.ContentType = "application/json";
+            string json =
+                JsonConvert.SerializeObject(new { StatusCode = HttpStatusCode.InternalServerError, Message = exception.Message });
+
+            await httpContext.Response.WriteAsync(json);
         }
     }
 }

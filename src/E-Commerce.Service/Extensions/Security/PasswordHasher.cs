@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace E_Commerce.Service.Extensions.Security
+﻿namespace E_Commerce.Service.Extensions.Security
 {
     public class PasswordHasher
     {
