@@ -1,4 +1,6 @@
-﻿using E_Commerce.Domain.Configurations;
+﻿using AutoMapper;
+using E_Commerce.Data.IRepositories;
+using E_Commerce.Domain.Configurations;
 using E_Commerce.Domain.Entities.Users;
 using E_Commerce.Service.DTOs.Users;
 using E_Commerce.Service.Interfases;
@@ -8,6 +10,14 @@ namespace E_Commerce.Service.Services
 {
     public class UserService : IUserService
     {
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
+
+        public UserService(IUnitOfWork unitOfwork, IMapper mapper)
+        {
+            this._unitOfWork = unitOfwork;
+            this._mapper = mapper;
+        }
         public Task<User> AddAsync(UserForCreateDto dto)
         {
             throw new NotImplementedException();
