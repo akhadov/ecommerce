@@ -1,6 +1,6 @@
 ﻿using E_Commerce.Domain.Configurations;
 using E_Commerce.Domain.Entities.Products;
-using E_Commerce.Service.DTOs.Products;
+using E_Commerce.Service.DTOs.Products.Reviews;
 using E_Commerce.Service.Interfases;
 using System.Linq.Expressions;
 

@@ -7,10 +7,11 @@ namespace E_Commerce.Service.Interfases
 {
     public interface IUserService
     {
-        Task<User> AddAsync(UserForCreateDto dto);
-        Task<User> UpdateAsync(long id, UserForCreateDto dto);
+        Task<User> UpdateAsync(long id, UserPutDto dto);
+        Task<User> UpdateAsync(long id, UserPatchDto dto);
         Task<bool> DeleteAsync(Expression<Func<User, bool>> expression);
-        Task<User> GetAsync(Expression<Func<User, bool>> expression);
-        Task<IEnumerable<User>> GetAllAsync(PaginationParams @params, Expression<Func<User, bool>> expression = null);
+        Task<UserFullViewDto?> GetAsync(Expression<Func<User, bool>> expression);
+        Task<IEnumerable<User>> GetAllAsync(Expression<Func<User, bool>>? expression = null,
+            PaginationParams? parameters = null);
     }
 }

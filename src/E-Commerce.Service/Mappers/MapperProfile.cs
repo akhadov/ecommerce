@@ -5,9 +5,10 @@ using E_Commerce.Domain.Entities.Payments;
 using E_Commerce.Domain.Entities.Products;
 using E_Commerce.Domain.Entities.Users;
 using E_Commerce.Service.DTOs.Addresses;
-using E_Commerce.Service.DTOs.Orders;
+using E_Commerce.Service.DTOs.Orders.OrderDetails;
 using E_Commerce.Service.DTOs.Payments;
-using E_Commerce.Service.DTOs.Products;
+using E_Commerce.Service.DTOs.Products.Categories;
+using E_Commerce.Service.DTOs.Products.Reviews;
 using E_Commerce.Service.DTOs.Users;
 
 namespace E_Commerce.Service.Mappers

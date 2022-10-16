@@ -1,6 +1,6 @@
 ﻿using E_Commerce.Domain.Configurations;
 using E_Commerce.Domain.Entities.Orders;
-using E_Commerce.Service.DTOs.Orders;
+using E_Commerce.Service.DTOs.Orders.OrderDetails;
 using System.Linq.Expressions;
 
 namespace E_Commerce.Service.Interfases

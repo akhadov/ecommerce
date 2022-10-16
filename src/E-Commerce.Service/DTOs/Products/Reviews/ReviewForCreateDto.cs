@@ -1,9 +1,9 @@
-﻿namespace E_Commerce.Service.DTOs.Products
+﻿namespace E_Commerce.Service.DTOs.Products.Reviews
 {
     public class ReviewForCreateDto
     {
         public decimal Rating { get; set; }
-        public string Comment { get; set; } = String.Empty;
+        public string Comment { get; set; } = string.Empty;
         public long ProductId { get; set; }
         public long UserId { get; set; }
     }
