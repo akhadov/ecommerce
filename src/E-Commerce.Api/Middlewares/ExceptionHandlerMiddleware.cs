@@ -1,5 +1,4 @@
-﻿using E_Commerce.Service.Exceptions;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System.Net;
 
 namespace E_Commerce.Api.Middlewares

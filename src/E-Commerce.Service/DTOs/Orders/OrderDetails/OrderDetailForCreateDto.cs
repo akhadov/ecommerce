@@ -1,4 +1,4 @@
-﻿namespace E_Commerce.Service.DTOs.Orders
+﻿namespace E_Commerce.Service.DTOs.Orders.OrderDetails
 {
     public class OrderDetailForCreateDto
     {
