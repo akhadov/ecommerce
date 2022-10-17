@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using E_Commerce.Service.Exceptions;
+using Newtonsoft.Json;
 using System.Net;
 
 namespace E_Commerce.Api.Middlewares
@@ -17,16 +18,16 @@ namespace E_Commerce.Api.Middlewares
             {
                 await _next(httpContext);
             }
-            catch (StatusCodeException statusCodeException)
+            catch (HttpStatusCodeException httpStatusCodeException)
             {
-                await HandlerAsync(statusCodeException, httpContext);
+                await HandlerAsync(httpStatusCodeException, httpContext);
             }
             catch (Exception exception)
             {
                 await HandlerOtherAsync(exception, httpContext);
             }
         }
-        public async Task HandlerAsync(StatusCodeException exception, HttpContext httpContext)
+        public async Task HandlerAsync(HttpStatusCodeException exception, HttpContext httpContext)
         {
             httpContext.Response.StatusCode = (int)exception.StatusCode;
             httpContext.Response.ContentType = "application/json";
