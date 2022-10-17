@@ -1,6 +1,7 @@
 ﻿namespace E_Commerce.Service.DTOs.Products.Categories
 {
-    internal class CategoryPutDto
+    public class CategoryPutDto
     {
+        public string Name { get; set; } = String.Empty;
     }
 }
