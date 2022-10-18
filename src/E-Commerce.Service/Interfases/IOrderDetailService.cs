@@ -7,10 +7,12 @@ namespace E_Commerce.Service.Interfases
 {
     internal interface IOrderDetailService
     {
-        Task<OrderDetail> AddAsync(OrderDetailForCreateDto dto);
-        Task<OrderDetail> UpdateAsync(long id, OrderDetailForCreateDto dto);
+        Task<OrderDetail> AddAsync(long userId, long productId, OrderDetailForCreateDto dto);
+        Task<OrderDetail> UpdateAsync(long id, OrderDetailForPutDto dto);
+        Task<OrderDetail> UpdateAsync(long id, OrderDetailForPatchDto dto);
         Task<bool> DeleteAsync(Expression<Func<OrderDetail, bool>> expression);
-        Task<OrderDetail> GetAsync(Expression<Func<OrderDetail, bool>> expression);
-        Task<IEnumerable<OrderDetail>> GetAllAsync(PaginationParams @params, Expression<Func<OrderDetail, bool>> expression = null);
+        Task<OrderDetailForFullViewDto> GetAsync(Expression<Func<OrderDetail, bool>> expression);
+        Task<IEnumerable<OrderDetail>> GetAllAsync(Expression<Func<OrderDetail, bool>>? expression = null,
+        PaginationParams? parameters = null);
     }
 }

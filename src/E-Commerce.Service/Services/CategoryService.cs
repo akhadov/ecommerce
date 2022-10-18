@@ -18,17 +18,17 @@ namespace E_Commerce.Service.Services
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Category>> GetAllAsync(PaginationParams @params, Expression<Func<Category, bool>> expression = null)
+        public Task<IEnumerable<Category>> GetAllAsync(Expression<Func<Category, bool>>? expression = null, PaginationParams? parameters = null)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Category> GetAsync(Expression<Func<Category, bool>> expression)
+        public Task<CategoryFullViewDto> GetAsync(Expression<Func<Category, bool>> expression)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Category> UpdateAsync(long id, CategoryForCreateDto dto)
+        public Task<Category> UpdateAsync(long id, CategoryPutDto dto)
         {
             throw new NotImplementedException();
         }

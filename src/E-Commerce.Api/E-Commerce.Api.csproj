@@ -13,9 +13,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Extensions\" />
-    <Folder Include="wwwroot\" />
+    <Folder Include="Controllers\NewFolder\" />
+    <Folder Include="Extensions\NewFolder\" />
+    <Folder Include="wwwroot\NewFolder\" />
   </ItemGroup>
 
   <ItemGroup>

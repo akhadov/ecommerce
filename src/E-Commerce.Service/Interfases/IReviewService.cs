@@ -7,10 +7,12 @@ namespace E_Commerce.Service.Interfases
 {
     public interface IReviewService
     {
-        Task<Review> AddAsync(ReviewForCreateDto dto);
-        Task<Review> UpdateAsync(long id, ReviewForCreateDto dto);
+        Task<Review> AddAsync(long userId, long productId, ReviewForCreateDto dto);
+        Task<Review> UpdateAsync(long id, ReviewForPutDto dto);
+        Task<Review> UpdateAsync(long id, ReviewForPatchDto dto);
         Task<bool> DeleteAsync(Expression<Func<Review, bool>> expression);
-        Task<Review> GetAsync(Expression<Func<Review, bool>> expression);
-        Task<IEnumerable<Review>> GetAllAsync(PaginationParams @params, Expression<Func<Review, bool>> expression = null);
+        Task<ReviewForFullViewDto> GetAsync(Expression<Func<Review, bool>> expression);
+        Task<IEnumerable<Review>> GetAllAsync(Expression<Func<Review, bool>>? expression = null,
+        PaginationParams? parameters = null);
     }
 }

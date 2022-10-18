@@ -8,9 +8,11 @@ namespace E_Commerce.Service.Interfases
     public interface IAddressService
     {
         Task<Address> AddAsync(AddressForCreateDto dto);
-        Task<Address> UpdateAsync(long id, AddressForCreateDto dto);
+        Task<Address> UpdateAsync(long id, AddressForPutDto dto);
+        Task<Address> UpdateAsync(long id, AddressForPatchDto dto);
         Task<bool> DeleteAsync(Expression<Func<Address, bool>> expression);
-        Task<Address> GetAsync(Expression<Func<Address, bool>> expression);
-        Task<IEnumerable<Address>> GetAllAsync(PaginationParams @params, Expression<Func<Address, bool>> expression = null);
+        Task<AddressForViewAllDto> GetAsync(Expression<Func<Address, bool>> expression);
+        Task<IEnumerable<Address>> GetAllAsync(Expression<Func<Address, bool>>? expression = null,
+        PaginationParams? parameters = null);
     }
 }

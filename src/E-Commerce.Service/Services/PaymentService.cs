@@ -18,17 +18,22 @@ namespace E_Commerce.Service.Services
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Payment>> GetAllAsync(PaginationParams @params, Expression<Func<Payment, bool>> expression = null)
+        public Task<IEnumerable<Payment>> GetAllAsync(Expression<Func<Payment, bool>>? expression = null, PaginationParams? parameters = null)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Payment> GetAsync(Expression<Func<Payment, bool>> expression)
+        public Task<PaymentForFullViewDto> GetAsync(Expression<Func<Payment, bool>> expression)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Payment> UpdateAsync(long id, PaymentForCreateDto dto)
+        public Task<Payment> UpdateAsync(long id, PaymentForPutDto dto)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Payment> UpdateAsync(long id, PaymentForPatchDto dto)
         {
             throw new NotImplementedException();
         }

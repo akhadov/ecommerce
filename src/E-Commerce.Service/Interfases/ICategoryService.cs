@@ -8,9 +8,10 @@ namespace E_Commerce.Service.Interfases
     public interface ICategoryService
     {
         Task<Category> AddAsync(CategoryForCreateDto dto);
-        Task<Category> UpdateAsync(long id, CategoryForCreateDto dto);
+        Task<Category> UpdateAsync(long id, CategoryPutDto dto);
         Task<bool> DeleteAsync(Expression<Func<Category, bool>> expression);
-        Task<Category> GetAsync(Expression<Func<Category, bool>> expression);
-        Task<IEnumerable<Category>> GetAllAsync(PaginationParams @params, Expression<Func<Category, bool>> expression = null);
+        Task<CategoryFullViewDto> GetAsync(Expression<Func<Category, bool>> expression);
+        Task<IEnumerable<Category>> GetAllAsync(Expression<Func<Category, bool>>? expression = null,
+            PaginationParams? parameters = null);
     }
 }

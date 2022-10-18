@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Http;
 
 namespace E_Commerce.Service.Interfases
 {
-    internal class IFileService
+    public interface IFileService
     {
+        public string ImageFolderName { get; }
+        Task<string> SaveImageAsync(IFormFile file);
+
+        Task<string> SaveCvAsync(IFormFile formFile);
     }
 }

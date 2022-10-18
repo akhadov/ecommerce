@@ -18,27 +18,28 @@ namespace E_Commerce.Service.Services
             this._unitOfWork = unitOfwork;
             this._mapper = mapper;
         }
-        public Task<User> AddAsync(UserForCreateDto dto)
-        {
-            throw new NotImplementedException();
-        }
 
         public Task<bool> DeleteAsync(Expression<Func<User, bool>> expression)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<User>> GetAllAsync(PaginationParams @params, Expression<Func<User, bool>> expression = null)
+        public Task<IEnumerable<User>> GetAllAsync(Expression<Func<User, bool>>? expression = null, PaginationParams? parameters = null)
         {
             throw new NotImplementedException();
         }
 
-        public Task<User> GetAsync(Expression<Func<User, bool>> expression)
+        public Task<UserFullViewDto?> GetAsync(Expression<Func<User, bool>> expression)
         {
             throw new NotImplementedException();
         }
 
-        public Task<User> UpdateAsync(long id, UserForCreateDto dto)
+        public Task<User> UpdateAsync(long id, UserPutDto dto)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<User> UpdateAsync(long id, UserPatchDto dto)
         {
             throw new NotImplementedException();
         }

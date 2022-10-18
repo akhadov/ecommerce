@@ -18,17 +18,22 @@ namespace E_Commerce.Service.Services
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Address>> GetAllAsync(PaginationParams @params, Expression<Func<Address, bool>> expression = null)
+        public Task<IEnumerable<Address>> GetAllAsync(Expression<Func<Address, bool>>? expression = null, PaginationParams? parameters = null)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Address> GetAsync(Expression<Func<Address, bool>> expression)
+        public Task<AddressForViewAllDto> GetAsync(Expression<Func<Address, bool>> expression)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Address> UpdateAsync(long id, AddressForCreateDto dto)
+        public Task<Address> UpdateAsync(long id, AddressForPutDto dto)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Address> UpdateAsync(long id, AddressForPatchDto dto)
         {
             throw new NotImplementedException();
         }

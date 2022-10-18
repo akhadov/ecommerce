@@ -8,7 +8,7 @@ namespace E_Commerce.Service.Services
 {
     public class ReviewService : IReviewService
     {
-        public Task<Review> AddAsync(ReviewForCreateDto dto)
+        public Task<Review> AddAsync(long userId, long productId, ReviewForCreateDto dto)
         {
             throw new NotImplementedException();
         }
@@ -18,17 +18,22 @@ namespace E_Commerce.Service.Services
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Review>> GetAllAsync(PaginationParams @params, Expression<Func<Review, bool>> expression = null)
+        public Task<IEnumerable<Review>> GetAllAsync(Expression<Func<Review, bool>>? expression = null, PaginationParams? parameters = null)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Review> GetAsync(Expression<Func<Review, bool>> expression)
+        public Task<ReviewForFullViewDto> GetAsync(Expression<Func<Review, bool>> expression)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Review> UpdateAsync(long id, ReviewForCreateDto dto)
+        public Task<Review> UpdateAsync(long id, ReviewForPutDto dto)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Review> UpdateAsync(long id, ReviewForPatchDto dto)
         {
             throw new NotImplementedException();
         }
