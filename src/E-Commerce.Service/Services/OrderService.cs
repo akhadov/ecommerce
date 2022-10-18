@@ -8,7 +8,7 @@ namespace E_Commerce.Service.Services
 {
     public class OrderService : IOrderService
     {
-        public Task<Order> AddAsync(OrderForCreateDto dto)
+        public Task<Order> AddAsync(long userId, long paymentId, long addressId, OrderForCreateDto dto)
         {
             throw new NotImplementedException();
         }
@@ -18,17 +18,22 @@ namespace E_Commerce.Service.Services
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Order>> GetAllAsync(PaginationParams @params, Expression<Func<Order, bool>> expression = null)
+        public Task<IEnumerable<Order>> GetAllAsync(Expression<Func<Order, bool>>? expression = null, PaginationParams? parameters = null)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Order> GetAsync(Expression<Func<Order, bool>> expression)
+        public Task<OrderForFullViewDto> GetAsync(Expression<Func<Order, bool>> expression)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Order> UpdateAsync(long id, OrderForCreateDto dto)
+        public Task<Order> UpdateAsync(long id, OrderForPutDto dto)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Order> UpdateAsync(long id, OrderForPatchDto dto)
         {
             throw new NotImplementedException();
         }

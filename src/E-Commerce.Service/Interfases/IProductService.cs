@@ -7,10 +7,12 @@ namespace E_Commerce.Service.Interfases
 {
     public interface IProductService
     {
-        Task<Product> AddAsync(ProductForCreateDto dto);
-        Task<Product> UpdateAsync(long id, ProductForCreateDto dto);
+        Task<Product> AddAsync(long categoryId, ProductForCreateDto dto);
+        Task<Product> UpdateAsync(long id, ProductForPutDto dto);
+        Task<Product> UpdateAsync(long id, ProductForPatchDto dto);
         Task<bool> DeleteAsync(Expression<Func<Product, bool>> expression);
-        Task<Product> GetAsync(Expression<Func<Product, bool>> expression);
-        Task<IEnumerable<Product>> GetAllAsync(PaginationParams @params, Expression<Func<Product, bool>> expression = null);
+        Task<ProductForFullViewDto> GetAsync(Expression<Func<Product, bool>> expression);
+        Task<IEnumerable<Product>> GetAllAsync(Expression<Func<Product, bool>>? expression = null,
+        PaginationParams? parameters = null);
     }
 }

@@ -18,7 +18,8 @@ namespace E_Commerce.Service.Services
             this._unitOfWork = unitOfWork;
             this._mapper = mapper;
         }
-        public Task<Product> AddAsync(ProductForCreateDto dto)
+
+        public Task<Product> AddAsync(long categoryId, ProductForCreateDto dto)
         {
             throw new NotImplementedException();
         }
@@ -28,17 +29,22 @@ namespace E_Commerce.Service.Services
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Product>> GetAllAsync(PaginationParams @params, Expression<Func<Product, bool>> expression = null)
+        public Task<IEnumerable<Product>> GetAllAsync(Expression<Func<Product, bool>>? expression = null, PaginationParams? parameters = null)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Product> GetAsync(Expression<Func<Product, bool>> expression)
+        public Task<ProductForFullViewDto> GetAsync(Expression<Func<Product, bool>> expression)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Product> UpdateAsync(long id, ProductForCreateDto dto)
+        public Task<Product> UpdateAsync(long id, ProductForPutDto dto)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Product> UpdateAsync(long id, ProductForPatchDto dto)
         {
             throw new NotImplementedException();
         }

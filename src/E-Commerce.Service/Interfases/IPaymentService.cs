@@ -8,9 +8,11 @@ namespace E_Commerce.Service.Interfases
     public interface IPaymentService
     {
         Task<Payment> AddAsync(PaymentForCreateDto dto);
-        Task<Payment> UpdateAsync(long id, PaymentForCreateDto dto);
+        Task<Payment> UpdateAsync(long id, PaymentForPutDto dto);
+        Task<Payment> UpdateAsync(long id, PaymentForPatchDto dto);
         Task<bool> DeleteAsync(Expression<Func<Payment, bool>> expression);
-        Task<Payment> GetAsync(Expression<Func<Payment, bool>> expression);
-        Task<IEnumerable<Payment>> GetAllAsync(PaginationParams @params, Expression<Func<Payment, bool>> expression = null);
+        Task<PaymentForFullViewDto> GetAsync(Expression<Func<Payment, bool>> expression);
+        Task<IEnumerable<Payment>> GetAllAsync(Expression<Func<Payment, bool>>? expression = null,
+        PaginationParams? parameters = null);
     }
 }
