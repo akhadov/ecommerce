@@ -5,9 +5,8 @@ namespace E_Commerce.Service.DTOs.Users
 {
     public class UserForCreateDto
     {
-        [Required(ErrorMessage = "First name is required")]
+        [Required(ErrorMessage = "First name is required"), Name]
         [MaxLength(50), MinLength(2)]
-        [Name]
         public string Name { get; set; } = String.Empty;
 
         [Required, Email]
